@@ -45,7 +45,7 @@ class HealthHandler(BaseHTTPRequestHandler):
 
 
 def start_health_server() -> None:
-    port = int(os.environ.get("PORT", "10000"))
+    port = int(os.environ.get("PORT", "8001"))
     server = ThreadingHTTPServer(("0.0.0.0", port), HealthHandler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
@@ -63,7 +63,7 @@ def start_keep_alive() -> None:
     `https://<your-app>.onrender.com/health`.
     """
     external_url = os.environ.get("RENDER_EXTERNAL_URL", "").strip().rstrip("/")
-    port = int(os.environ.get("PORT", "10000"))
+    port = int(os.environ.get("PORT", "8001"))
     target = (
         f"{external_url}/health"
         if external_url
@@ -194,7 +194,7 @@ class HealthHandler(BaseHTTPRequestHandler):
 
 
 def start_health_server() -> None:
-    port = int(os.environ.get("PORT", "10000"))
+    port = int(os.environ.get("PORT", "8001"))
     server = ThreadingHTTPServer(("0.0.0.0", port), HealthHandler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
@@ -212,7 +212,7 @@ def start_keep_alive() -> None:
     `https://<your-app>.onrender.com/health`.
     """
     external_url = os.environ.get("RENDER_EXTERNAL_URL", "").strip().rstrip("/")
-    port = int(os.environ.get("PORT", "10000"))
+    port = int(os.environ.get("PORT", "8001"))
     target = (
         f"{external_url}/health"
         if external_url
@@ -342,7 +342,7 @@ class HealthHandler(BaseHTTPRequestHandler):
 
 
 def start_health_server() -> None:
-    port = int(os.environ.get("PORT", "10000"))
+    port = int(os.environ.get("PORT", "8001"))
     server = ThreadingHTTPServer(("0.0.0.0", port), HealthHandler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
@@ -360,7 +360,7 @@ def start_keep_alive() -> None:
     `https://<your-app>.onrender.com/health`.
     """
     external_url = os.environ.get("RENDER_EXTERNAL_URL", "").strip().rstrip("/")
-    port = int(os.environ.get("PORT", "10000"))
+    port = int(os.environ.get("PORT", "8001"))
     target = (
         f"{external_url}/health"
         if external_url
