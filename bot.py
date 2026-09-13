@@ -297,9 +297,9 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()"""
-Anime Hindi Dub Bot -- main entry point.
-
+    main()
+    
+    """Anime Hindi Dub Bot -- main entry point.
 Starts an embedded HTTP health server (Render probes the web dyno)
 and then runs the Telegram bot via long polling.
 """
