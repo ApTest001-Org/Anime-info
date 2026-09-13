@@ -17,7 +17,7 @@ load_dotenv()
 TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 
 # Server Configuration (for Render deployment)
-PORT = int(os.getenv('PORT', '10000'))
+PORT = int(os.getenv('PORT', '8001'))
 
 # Source website configuration
 # Single source of truth for the site being scraped. The scraper uses
